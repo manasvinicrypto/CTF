@@ -1,0 +1,99 @@
+{
+  "name": "autoprefixer",
+  "version": "10.5.4",
+  "description": "Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website",
+  "keywords": [
+    "autoprefixer",
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "prefix"
+  ],
+  "bugs": {
+    "url": "https://github.com/postcss/autoprefixer/issues"
+  },
+  "license": "MIT",
+  "author": "Andrey Sitnik <andrey@sitnik.es>",
+  "repository": "postcss/autoprefixer",
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/postcss/"
+    },
+    {
+      "type": "tidelift",
+      "url": "https://tidelift.com/funding/github/npm/autoprefixer"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/ai"
+    }
+  ],
+  "bin": "bin/autoprefixer",
+  "main": "lib/autoprefixer.js",
+  "types": "lib/autoprefixer.d.ts",
+  "scripts": {
+    "unit": "uvu . '\\.test\\.js$'",
+    "test:coverage": "c8 node node_modules/uvu/bin.js . '\\.test\\.js$'",
+    "test:lint": "oxlint . bin/*",
+    "test:size": "size-limit",
+    "test": "pnpm run /^test:/"
+  },
+  "dependencies": {
+    "browserslist": "^4.28.6",
+    "caniuse-lite": "^1.0.30001806",
+    "fraction.js": "^5.3.4",
+    "picocolors": "^1.1.1",
+    "postcss-value-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "@logux/oxc-configs": "^0.4.1",
+    "@size-limit/preset-small-lib": "12.1.0",
+    "actions-up": "^1.16.0",
+    "c8": "^11.0.0",
+    "eslint-plugin-prefer-let": "^4.2.2",
+    "nanospy": "^2.0.2",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.24.0",
+    "postcss": "^8.5.19",
+    "size-limit": "^12.1.0",
+    "typescript": "^7.0.2",
+    "uvu": "^0.5.6"
+  },
+  "peerDependencies": {
+    "postcss": "^8.1.0"
+  },
+  "size-limit": [
+    {
+      "limit": "70 KB"
+    }
+  ],
+  "c8": {
+    "check-coverage": true,
+    "clean": true,
+    "exclude": [
+      "test/*"
+    ],
+    "lines": 100,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "skip-full": true
+  },
+  "engines": {
+    "node": "^10 || ^12 || >=14"
+  },
+  "clean-publish": {
+    "cleanDocs": true
+  }
+}
+{
+  "name": "my-app",
+  "dependencies": {},
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
